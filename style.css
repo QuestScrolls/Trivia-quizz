@@ -5,7 +5,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    margin: 0;
 }
 
 .container {
@@ -14,32 +14,79 @@ body {
     width: 90%;
     max-width: 600px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    padding: 12px;
+    padding: 20px;
+    text-align: center;
 }
 
-button {
-    padding: 10px 20px;
+.score-board {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: teal;
+    font-weight: bold;
+}
+
+#question {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    color: #333;
+}
+
+#choices-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.choice-btn {
+    padding: 12px 24px;
     background-color: slategray;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin: 10px;
-    transition: background-color 0.3s, transform 0.3s;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.2s;
+    min-width: 150px;
 }
 
-button:hover {
+.choice-btn:hover:not(:disabled) {
     background-color: teal;
     transform: scale(1.05);
 }
 
+.choice-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.choice-btn.correct {
+    background-color: #28a745 !important; /* green */
+}
+
+.choice-btn.wrong {
+    background-color: #dc3545 !important; /* red */
+}
+
 #result {
-    margin-top: 20px;
+    margin: 20px 0;
     font-weight: bold;
     font-size: 1.3rem;
     color: teal;
 }
 
-#retry {
-    display: none;
+.restart-btn {
+    padding: 10px 30px;
+    background-color: teal;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+.restart-btn:hover {
+    background-color: #006666;
 }
