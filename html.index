@@ -1,21 +1,21 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trivia Game</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container" aria-live="polite">
         <h1>Trivia Game</h1>
+        <div class="score-board">Score: <span id="score">0</span> / <span id="total-questions">0</span></div>
         <h2 id="question"></h2>
-        <div id="choices">
-            <button id="choice1" onclick="checkAnswer(this)"></button>
-            <button id="choice2" onclick="checkAnswer(this)"></button>
-            <button id="choice3" onclick="checkAnswer(this)"></button>
-            <button id="choice4" onclick="checkAnswer(this)"></button>
-            <button id="retry" onclick="retry()">Retry</button>
+        <div id="choices-container">
+            <!-- Buttons will be injected here by JavaScript -->
         </div>
         <div id="result"></div>
+        <button id="restart" class="restart-btn" style="display: none;">Play Again</button>
     </div>
     <script src="script.js"></script>
 </body>
